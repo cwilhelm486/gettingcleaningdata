@@ -25,6 +25,6 @@ tidydata <- function(workingdir) {
 
 	grouped <- group_by(meanstd,subject,activity)
 	newdata <- summarize_each(grouped,funs(mean))
-	write.table(newdata,paste(workingdir, "/tidydata.txt")
+	write.table(newdata,paste(workingdir, "/tidydata.txt"),row.names=FALSE)
 
 }
